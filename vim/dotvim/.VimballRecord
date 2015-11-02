@@ -1,0 +1,1 @@
+autosess.vmb: call delete('/home/jayant/.vim/doc/autosess.txt')|call delete('/home/jayant/.vim/plugin/autosess.vim')

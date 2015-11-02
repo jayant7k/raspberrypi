@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/jayant/Downloads/zephir/utils/utils'
+let g:netrw_dirhist_2='/home/jayant/Downloads/elasticsearch/elasticshell/config'
+let g:netrw_dirhist_3='/home/jayant/tmp/jedis/gradle'
+let g:netrw_dirhist_4='/opt/gitlab/embedded/share'
+let g:netrw_dirhist_5='/home/jayant/Downloads/logstash/logstash/patterns'
+let g:netrw_dirhist_6='/home/jayant/htdocs/phalcon/public'
+let g:netrw_dirhist_7='/home/jayant/naukri/storywizz/storywizz_api/app/config'
+let g:netrw_dirhist_8='/home/jayant/tmp/book/trunk/content/solr'
