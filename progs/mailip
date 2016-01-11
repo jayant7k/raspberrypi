@@ -1,0 +1,3 @@
+#!/bin/bash
+curl http://checkip.dyndns.org | mail -s ipaddress jayant7k@gmail.com
+
