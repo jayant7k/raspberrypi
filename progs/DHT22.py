@@ -250,11 +250,12 @@ if __name__ == "__main__":
    import DHT22
 
    # Intervals of about 2 seconds or less will eventually hang the DHT22.
-   INTERVAL=3
+   INTERVAL=10
 
    pi = pigpio.pi()
 
-   s = DHT22.sensor(pi, 22, LED=16, power=8)
+   # s = DHT22.sensor(pi, 4, LED=17, power=8)
+   s = DHT22.sensor(pi, 4)
 
    r = 0
 
