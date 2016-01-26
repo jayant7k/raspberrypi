@@ -1,0 +1,25 @@
+elastic schema
+
+PUT /ieth/
+
+PUT /ieth/_mapping/th
+
+{
+    "properties":{
+      "it": {"type": "float"},
+      "ih": {"type": "float"},
+      "et": {"type": "float"},
+      "eh": {"type": "float"},
+      "etmin": {"type": "float"},
+      "etmax": {"type": "float"},
+      "dt": {"type": "date", "format": "date_time_no_millis" }      
+    }
+}
+
+it
+ih
+et
+eh
+etmin
+etmax
+datetime
