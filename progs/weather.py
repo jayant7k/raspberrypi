@@ -35,7 +35,7 @@ data['etmax'] = t['temp_max']
 ### get weather data from sensor ###
 
 pi = pigpio.pi()
-s = DHT22.sensor(pi, 4)
+s = DHT22.sensor(pi, 4, 27)
 s.trigger()
 time.sleep(0.2)
 

@@ -254,8 +254,8 @@ if __name__ == "__main__":
 
    pi = pigpio.pi()
 
-   # s = DHT22.sensor(pi, 4, LED=17, power=8)
-   s = DHT22.sensor(pi, 4)
+   #s = DHT22.sensor(pi, 4, LED=27, power=8)
+   s = DHT22.sensor(pi, 4, 27)
 
    r = 0
 
