@@ -54,6 +54,9 @@ print("{}".format(json_data))
 
 # print("{}".format(json_data))
 
-# output = subprocess.check_output('curl -s -XPOST %s -d %s' % ( endpoint, json_data) )
-r = requests.post(endpoint, json_data)
-print("{}".format(r.text))
+if data['it'] > -10:
+    r = requests.post(endpoint, json_data)
+    print("{}".format(r.text))
+else:
+    print("Not logging.")
+
