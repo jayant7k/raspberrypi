@@ -4,8 +4,9 @@
 
 import json
 import tweepy
-from datetime import datetime
+# from datetime import datetime
 from elasticsearch import Elasticsearch
+from time import gmtime, strftime, localtime
 
 def get_api(cfg):
   auth = tweepy.OAuthHandler(cfg['consumer_key'], cfg['consumer_secret'])
@@ -13,8 +14,8 @@ def get_api(cfg):
   return tweepy.API(auth)
 
 def get_es():
-  d = datetime.now()
-  dt = d.strftime("%Y-%m-%dT%H:00:00Z")
+#  d = datetime.now()
+  dt = strftime("%Y-%m-%dT%H:00:00Z", gmtime())
   qry = {
     "query": {
       "range": {
@@ -31,7 +32,7 @@ def get_es():
     "from": 0,
     "size": 1
   }
-  es = Elasticsearch()
+  es = Elasticsearch([{'host': '192.168.1.51'}])
   res = es.search(index="ieth", body=qry)
   hit = res['hits']['hits']
   return hit
@@ -54,8 +55,8 @@ def main():
   dt = tmp[0]['_source']['dt']
   print("%s => it: %s, et: %s, ih: %s, eh: %s" % (dt, it, et, ih, eh))
 
-  t = datetime.now()
-  tm = t.strftime("%I:%M %p")
+#  t = datetime.now()
+  tm = strftime("%I:%M %p", localtime())
 
   tweet = "Weather Today at {}: temperature(room={}°C, outside={}°C), humidity(room={}%, outside={}%) #raspberrypi".format(tm,it,et,ih,eh)
   print tweet
